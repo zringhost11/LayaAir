@@ -704,7 +704,7 @@ export class Loader extends EventDispatcher {
 			for (var i = 0, n = arr.length; i < n; i++) {
 				var resUrl = arr[i];
 				var tex: Texture = Loader.getRes(resUrl);
-				delete Loader.textureMap[resUrl];
+				delete Loader.textureMap[URL.formatURL(resUrl)];
 				if (tex) tex.destroy();
 			}
 			arr.length = 0;
