@@ -38,7 +38,7 @@ const packsDef = [{
         './layaAir/laya/filters/**/*.*',
         './layaAir/laya/layagl/**/*.*',
         './layaAir/laya/webgl/**/*.*',
-        
+
         './layaAir/laya/RenderDriver/DriverDesign/RenderDevice/**/*.*',
         './layaAir/laya/RenderDriver/DriverDesign/2DRenderPass/**/*.*',
 
@@ -286,6 +286,29 @@ const packsDef = [{
         './layaAir/laya/navigation/**/**.ts'
     ],
 },
+{
+    'libName': "bpcore",
+    'input': [
+        "./layaAir/laya/bp/core/**/*.*",
+        "./layaAir/laya/bp/datas/**/*.*",
+        "./layaAir/laya/bp/export/**/*.*",
+        "./layaAir/laya/bp/express/**/*.*",
+        "./layaAir/laya/bp/runtime/**/*.*",
+    ],
+},
+{
+    'libName': "visualcode",
+    'input': [
+        "./layaAir/laya/bp/adapter/**/*.*",
+        "./layaAir/laya/bt/**/*.*"
+    ],
+},
+{
+    'libName': "bpextension",
+    'input': [
+        "./layaAir/laya/bp/extensions/**/*.*",
+    ],
+}
 ];
 
 /*
@@ -481,7 +504,7 @@ gulp.task("copyJsLibs", async () => {
         './src/layaAir/jsLibs/recast-navigation.wasm',
         './src/layaAir/jsLibs/spine.wasm_3.8.wasm',
         './src/layaAir/jsLibs/naga_wasm_bg.wasm',
-      
+
         '!./src/layaAir/jsLibs/{laya.Box2D.js,cannon.js,bullet.js,physx.release.js,laya.Box2D.wasm.js,bullet.wasm.js,physx.wasm.js,recast-navigation.js}'
     ])
         .pipe(gulp.dest('./build/libs'));
